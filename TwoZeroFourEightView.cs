@@ -15,6 +15,9 @@ namespace twozerofoureight
         Model model;
         Controller controller;
        
+    TwoZeroFourEightScoreView f2 = new TwoZeroFourEightScoreView();
+
+
         public TwoZeroFourEightView()
         {
             InitializeComponent();
@@ -29,7 +32,7 @@ namespace twozerofoureight
         {
             UpdateBoard(((TwoZeroFourEightModel) m).GetBoard());
             UpdateScore(((TwoZeroFourEightModel)m).GetBoard());
-
+           
         }
         //score table
         private void UpdateScore(int[,] board)
@@ -43,13 +46,16 @@ namespace twozerofoureight
                 }
           
             }
+            f2.cr_score(sum);
+            f2.Show();
             lblScore.Text = Convert.ToString(sum);
+           
         }
 
 
         private void UpdateTile(Label l, int i)
         {
-            if (i != 0)
+             if (i != 0)
             {
                 l.Text = Convert.ToString(i);
             } else {
@@ -92,6 +98,15 @@ namespace twozerofoureight
             UpdateTile(lbl31,board[3, 1]);
             UpdateTile(lbl32,board[3, 2]);
             UpdateTile(lbl33,board[3, 3]);
+
+
+          //  f2.tmp_vaule = lblScore.Text;
+            
+            //  f2.Show();
+          //  f2.Show();
+            // TwoZeroFourEightScoreView f2 = new TwoZeroFourEightScoreView();
+            // f2.Close();
+            //  f2.Show();
         }
 
         private void btnLeft_Click(object sender, EventArgs e)
@@ -125,6 +140,21 @@ namespace twozerofoureight
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+         //   TwoZeroFourEightScoreView f2 = new TwoZeroFourEightScoreView();
+         //  f2.tmp_vaule = lblScore.Text;
+           //   f2.Show();
+          //  f2.Show();
+            //   lblScore.Text = f2.tmp_vaule;
+
+        }
+
+        private void TwoZeroFourEightView_Load(object sender, EventArgs e)
         {
 
         }
