@@ -31,25 +31,17 @@ namespace twozerofoureight
         public void Notify(Model m)
         {
             UpdateBoard(((TwoZeroFourEightModel) m).GetBoard());
-            UpdateScore(((TwoZeroFourEightModel)m).GetBoard());
+            UpdateScore(((TwoZeroFourEightModel) m).Getscore());
            
         }
         //score table
-        private void UpdateScore(int[,] board)
+        private void UpdateScore(int s_score)
         {
-            int sum = 0;
-            for(int i = 0; i < 4; i++)
-            { for(int j =0;j< 4;j++)
-                {
-                    sum += board[i,j];
-                    
-                }
-          
-            }
-            f2.cr_score(sum);
+           //score.crscore(s_score);
             f2.Show();
-            lblScore.Text = Convert.ToString(sum);
-           
+            f2.cr_score(s_score);
+            lblScore.Text = Convert.ToString(s_score);
+
         }
 
 

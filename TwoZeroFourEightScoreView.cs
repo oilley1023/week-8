@@ -12,22 +12,10 @@ namespace twozerofoureight
 {
     public partial class TwoZeroFourEightScoreView : Form
     {
-        /*  private string cr_score;
-          public string tmp_vaule
-          {
-              get
-              {
-                  return cr_score;
-              }
-              set
-              {
-                cr_score =  value;
-              }
-          }*/
-
+        
         public void cr_score(int num)
         {
-            lblScore.Text =Convert.ToString(num);
+            lblScore.Text = Convert.ToString(num);
         }
         public TwoZeroFourEightScoreView()
         {
@@ -53,5 +41,12 @@ namespace twozerofoureight
         //{
         //    lblScore.Text = cr_score ;
         //}
+
+        //public void crscore(int score)
+        //{
+        //    lblScore.Text = Convert.ToString(score);
+        //}
+
     }
+
 }
