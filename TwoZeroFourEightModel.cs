@@ -11,7 +11,7 @@ namespace twozerofoureight
         protected int boardSize; // default is 4
         protected int[,] board;
         protected Random rand;
-        protected int score;
+        
 
         public int Getscore()
         {

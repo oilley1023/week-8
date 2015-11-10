@@ -40,7 +40,7 @@
             this.lblScore.Size = new System.Drawing.Size(162, 68);
             this.lblScore.TabIndex = 0;
             this.lblScore.Text = "0";
-            this.lblScore.Click += new System.EventHandler(this.lblScore_Click);
+     
             // 
             // TwoZeroFourEightScoreView
             // 
@@ -50,7 +50,7 @@
             this.Controls.Add(this.lblScore);
             this.Name = "TwoZeroFourEightScoreView";
             this.Text = "TwoZeroFourEightScoreView";
-            this.Load += new System.EventHandler(this.TwoZeroFourEightScoreView_Load);
+
             this.ResumeLayout(false);
 
         }

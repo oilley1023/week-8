@@ -10,43 +10,47 @@ using System.Windows.Forms;
 
 namespace twozerofoureight
 {
-    public partial class TwoZeroFourEightScoreView : Form
+    public partial class TwoZeroFourEightScoreView : Form,View
     {
-        
-        public void cr_score(int num)
-        {
-            lblScore.Text = Convert.ToString(num);
-        }
-        public TwoZeroFourEightScoreView()
-        {
-            InitializeComponent();
-           
+   
+            Model model;
+            public TwoZeroFourEightScoreView()
+            {
+                InitializeComponent();
+                model = new TwoZeroFourEightModel();
+                
         }
 
-        private void lblScore_Click(object sender, EventArgs e)
-        {
-           // lblScore.Text = "Current score "+tmp_vaule;
-          //  this.Hide();
+            public void Notify(Model m)
+            {
+               
+                UpdateScore(((TwoZeroFourEightModel)m).Getscore());
+
+            }
+            //score table
+            private void UpdateScore(int s_score)
+            {
+                //score.crscore(s_score);
+               
+               
+                lblScore.Text = Convert.ToString(s_score);
+
+            }
+
+
           
+           
+   
 
+       
 
+          
         }
 
-        private void TwoZeroFourEightScoreView_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        //public void Update()
-        //{
-        //    lblScore.Text = cr_score ;
-        //}
-
-        //public void crscore(int score)
-        //{
-        //    lblScore.Text = Convert.ToString(score);
-        //}
+    
 
     }
 
-}
+
+

@@ -14,8 +14,7 @@ namespace twozerofoureight
     {
         Model model;
         Controller controller;
-       
-    TwoZeroFourEightScoreView f2 = new TwoZeroFourEightScoreView();
+        TwoZeroFourEightScoreView f2 = new TwoZeroFourEightScoreView();
 
 
         public TwoZeroFourEightView()
@@ -23,6 +22,7 @@ namespace twozerofoureight
             InitializeComponent();
             model = new TwoZeroFourEightModel();
             model.AttachObserver(this);
+            model.AttachObserver(f2);
             controller = new TwoZeroFourEightController();
             controller.AddModel(model);
             controller.ActionPerformed(TwoZeroFourEightController.LEFT);
@@ -39,7 +39,7 @@ namespace twozerofoureight
         {
            //score.crscore(s_score);
             f2.Show();
-            f2.cr_score(s_score);
+            
             lblScore.Text = Convert.ToString(s_score);
 
         }
